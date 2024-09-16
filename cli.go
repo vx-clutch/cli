@@ -19,12 +19,18 @@ const (
 )
 
 func Setup(name string) {
+	mname = name
 }
 
 func Fatal(m any) {
 	fmt.Printf("%s: %sfatal error%s: %s", mname, errC, reset, m)
 	fmt.Println("\ncompilation terminated.")
 	os.Exit(0)
+}
+
+func Fatalf(m any, args ...string) string {
+	fmt.Printf("%s: %serror%s: %s\n", mname, errC, reset, fmt.Sprintf(m, ...args))
+	return fmt.Sprintf("%s: %serror%s: %s\n", mname, errC, reset, m)
 }
 
 func Error(m any) string {

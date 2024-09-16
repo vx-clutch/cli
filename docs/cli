@@ -1,0 +1,18 @@
+Setup:
+  Must be called first and be passed the name of the program or project
+Fatal
+  This is a fatal call and exits the program gracfully.
+Fatalf
+  This is a fatal call and exits the progrma gracfully. But also can be passed a formatted string.
+    ex:
+      cli.Fatalf("Error: %s", foo)
+Warn:
+  This is a warning call and dosn't exit
+Warnf:
+  This is a warning call and dosn't exit. But can also be passed a formatted string.
+    ex:
+      cli.Warnf("Warn: %s", bar)
+Debug:
+  This is a debug call and is nice for debbuging your program. It is passed a debug tag and a debug value
+    ex:
+      cli.Debug("baz", foobar)

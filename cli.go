@@ -29,14 +29,14 @@ func Setup(name string) {
 // Fatal call exits with zero, takes a fatal error message
 func Fatal(m string) {
 	fmt.Printf("%s: %sfatal error%s: %s", mname, errC, reset, m)
-	fmt.Println("\ncompilation terminated.")
+	fmt.Println("\nprogram terminated.")
 	os.Exit(0)
 }
 
 // Fatal call exits with zero, Takes a error message and a formatted string
 func Fatalf(m string, args ...interface{}) {
 	fmt.Printf("%s: %serror%s: %s\n", mname, errC, reset, fmt.Sprintf(m, args...))
-	fmt.Println("compilation terminated.")
+	fmt.Println("program terminated.")
 	os.Exit(0)
 }
 
